@@ -1,0 +1,8 @@
+*INSERT SORT
+ordenação por inserção, realiza o processo enquanto os indices do vetor recebem o elemento;
+
+
+*SELECT SORT 
+procura pelo menor elemento no vetor e troca pro lugar onde se encontra o indice autal;
+
+
