@@ -1,0 +1,4 @@
+Fizeram uma revisão sobre vetores e slides se encontrar na aula 2 no ufpr virtual;
+
+
+gcc -Wall -Werror -Wextra -pedantic fonte.c -o executavel
