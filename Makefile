@@ -1,17 +1,14 @@
 # Definição de variáveis para os comandos do Git
 GIT = git
-COMMIT_MESSAGE = "algum comentario"
 
-# Target para adicionar todas as mudanças
-add:
-	$(GIT) add .
-
-# Target para fazer commit das mudanças
-commit: add
-	$(GIT) commit -m $(COMMIT_MESSAGE)
+# Solicita ao usuário uma mensagem de commit antes de executar o commit
+ask_commit_message:
+	@read -p "Digite a mensagem de commit: " commitMessage; \
+	$(GIT) add .; \
+	$(GIT) commit -m "$$commitMessage"
 
 # Target para fazer push das mudanças
-push: commit
+push:
 	$(GIT) push
 
 # Target para fazer pull das mudanças
@@ -19,7 +16,7 @@ pull:
 	$(GIT) pull
 
 # Target padrão que executa add, commit, push e pull
-all: pull push
+all: pull ask_commit_message push
 
-.PHONY: add commit push pull all
+.PHONY: ask_commit_message push pull all
 
