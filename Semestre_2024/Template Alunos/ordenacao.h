@@ -7,6 +7,7 @@
 
 #define MAX_CHAR_NOME 50
 
+
 // a função getNome deve colocar o seu nome dentro da chamada
 // seu nome pode ter no máximo MAX_CHAR_NOME - 1 caracteres
 void getNome(char nome[]);

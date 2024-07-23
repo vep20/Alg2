@@ -2,3 +2,34 @@ Fizeram uma revisão sobre vetores e slides se encontrar na aula 2 no ufpr virtu
 
 
 gcc -Wall -Werror -Wextra -pedantic fonte.c -o executavel
+
+    
+Aulas com o Paulo:
+---------------------------------------------------------------------------------------------
+03/07/2024
+-Teste de mesa do seguinte algoritmo:
+
+Função particionar (v,a,b)
+x = v[b]; // pivo
+m =  a;
+para i = a até b - 1
+    se v[i] <= x
+        trocar (v,m,i);
+        m = m + 1;
+trocar(v.m,b);
+retorne m; 
+
+exemplo 
+    i  1   2   3  4  5   6 
+ v[i] 42  15  23  8  4  16
+
+ a  b  x  m  i  
+ 1  6  
+
+exemplo 
+    i  1   2   3   4   5  6 
+ v[i] 27  81  56  16   3  1
+
+ a  b  x  m  i  
+ 1  6  1  1  1     condição de parada   
+        
