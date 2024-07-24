@@ -4,6 +4,13 @@
 
 #include "ordenacao.h"
 
+void imprime_vetor(int vetor[], int tam){
+
+    for(int i = 0; i < tam; i++)
+        printf("v[%d] = %d ", i, vetor[i]);
+    printf("\n");           
+} 
+
 int main() {
     char nome[MAX_CHAR];
     int numComp;
@@ -25,16 +32,17 @@ int main() {
 
     numComp = mergeSort(vetor, 3);
     printf("NumComp: %d\n", numComp);
-    numComp = quickSort(vetor, 3);
-    printf("NumComp: %d\n", numComp);
-    numComp = heapSort(vetor, 3);
-    printf("NumComp: %d\n", numComp);
-    numComp = mergeSortSR(vetor, 3);
-    printf("NumComp: %d\n", numComp);
-    numComp = quickSortSR(vetor, 3);
-    printf("NumComp: %d\n", numComp);
-    numComp = heapSortSR(vetor, 3);
-    printf("NumComp: %d\n", numComp);
+    imprime_vetor(vetor,3);
+    // numComp = quickSort(vetor, 3);
+    // printf("NumComp: %d\n", numComp);
+    // numComp = heapSort(vetor, 3);
+    // printf("NumComp: %d\n", numComp);
+    // numComp = mergeSortSR(vetor, 3);
+    // printf("NumComp: %d\n", numComp);
+    // numComp = quickSortSR(vetor, 3);
+    // printf("NumComp: %d\n", numComp);
+    // numComp = heapSortSR(vetor, 3);
+    // printf("NumComp: %d\n", numComp);
 
     free(vetor);
 
