@@ -4,13 +4,11 @@
 #include <stdlib.h>
 
 void getNome(char nome[]) {
-    // substitua por seu nome
     strncpy(nome, "Victor Eduardo de Paula", MAX_CHAR);
     // adicionada terminação manual para caso de overflow
     nome[MAX_CHAR - 1] = '\0';
 }
 
-// a função a seguir deve retornar o seu número de GRR
 uint32_t getGRR() { return 20203937; }
 
 void copiaVetor(int vetor1[], int vetor2[], int inicio, int tamanho){
@@ -20,7 +18,7 @@ void copiaVetor(int vetor1[], int vetor2[], int inicio, int tamanho){
 }
 
 
-int* merge(int vetor[], int inicio, int meio, int fim, uint64_t* numComparacoes) {
+int* merge(int vetor[], int inicio, int meio, int fim, int* numComparacoes) {
     
     if (inicio >= fim) 
         return vetor;
@@ -43,6 +41,7 @@ int* merge(int vetor[], int inicio, int meio, int fim, uint64_t* numComparacoes)
         
         else 
             vetor_temporario[indice_resultado++] = vetor[indice_direita++];
+        printf("\n%d\n",*numComparacoes);
     }
 
      while (indice_esquerda <= meio) 
@@ -58,7 +57,7 @@ int* merge(int vetor[], int inicio, int meio, int fim, uint64_t* numComparacoes)
     return vetor;
 }
 
-uint64_t mergeSortAux(int vetor[], int inicio, int fim, uint64_t* numComparacoes) {
+uint64_t mergeSortAux(int vetor[], int inicio, int fim, int* numComparacoes) {
     if (inicio >= fim) {
         return 0;
     }
@@ -74,7 +73,7 @@ uint64_t mergeSortAux(int vetor[], int inicio, int fim, uint64_t* numComparacoes
 }
 
 uint64_t mergeSort(int vetor[], size_t tam){
-    uint64_t auxNumComparacoes;
+    int auxNumComparacoes;
     
     auxNumComparacoes = 0;
     mergeSortAux(vetor, 0, tam - 1, &auxNumComparacoes);

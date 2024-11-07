@@ -22,9 +22,9 @@ int main() {
         return 1;
     }
 
-    vetor[0] = 1;
-    vetor[1] = 10;
-    vetor[2] = 12;
+    vetor[0] = 11;
+    vetor[1] = 23;
+    vetor[2] = 10;
 
     getNome(nome);
     printf("Trabalho de %s\n", nome);
