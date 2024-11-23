@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório do Trabalho Prático: Ordenação e Pesquisa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #004186;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Relatório Trabalho Prático: Ordenação e Pesquisa</h1>
+
+    <h2>Introdução</h2>
+    <p>Este trabalho prático tem como objetivo a implementação e comparação de determinados algoritmos de ordernação e pesquisa
+        aprendidos durante a disciplina de Algoritmos e Estruturas de Dados 2.</p>
+
+    <h2>Descrição do Programa</h2>
+    <ul>
+        <li><strong>Escolha de como o programa irá funcionar:</strong> 
+            <ul> 
+                <li> Caso o usuario escolha "1": O programa irá rodar automaticamente 1000x, contando numero de comparações em todos os algoritmos e 
+                    numeros de trocas nos algoritmos de ordenação. Resultados são armazenados em uma matriz para serem usados posteriormente; </li>
+                <li> Caso o usuario escolha "2": Sera gerado um vetor aleatorio com preenchimento total, que o usuario poderá escolher qual algoritmo
+                    de ordenação sera rodado ou se quer utilizar algum dos algoritmos de busca. Numero de comparações e permutações são mostrados em 
+                    tela logo apos </li>
+            </ul> 
+        </li>
+        <h2></h2>
+        <li><strong>Algoritmos de Ordenação implementados:</strong> 
+            <ul>
+                <li>ShellSort (metodo Knuth e original);</li>
+                <li>QuickSort (pivô na posição inicial e pivô utilizando mediana);</li>
+                <li>InsertionSort.</li>
+            </ul>
+        </li>
+        <h2></h2>
+        <li><strong>Algoritmos de Busca implementados:</strong> Pesquisa Sequencial e Pesquisa Binária.</li>
+        <h2></h2>
+        <li><strong>Valores calculados</strong> Número de comparações e trocas registradas para cada algoritmo.</li>
+    </ul>
+
+    <h2>Resultados Obtidos</h2>
+    <h3>Desempenho dos Algoritmos</h3>
+    <p> Valores referentes ao funcionamente do programa de forma automatica, ou seja, com a realização de cada ordenação e busca 1000x.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Algoritmo</th>
+                <th>Média Comparações</th>
+                <th>Desvio Comparações</th>
+                <th>Média Permutações</th>
+                <th>Desvio Permutações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ShellSort (espaçamento 1)</td>
+                <td>14995.50</td>
+                <td>206.50</td>
+                <td>8840.00</td>
+                <td>215.00</td>
+            </tr>
+            <tr>
+                <td>ShellSort (espaçamento 2)</td>
+                <td>15760.00</td>
+                <td>373.00</td>
+                <td>7465.50</td>
+                <td>388.50</td>
+            </tr>
+            <tr>
+                <td>QuickSort (Pivô 1)</td>
+                <td>10320.50</td>
+                <td>216.50</td>
+                <td>3636.50</td>
+                <td>21.50</td>
+            </tr>
+            <tr>
+                <td>QuickSort (Pivô 2)</td>
+                <td>11175.50</td>
+                <td>125.50</td>
+                <td>2488.50</td>
+                <td>8.50</td>
+            </tr>
+            <tr>
+                <td>InsertionSort</td>
+                <td>255016.50</td>
+                <td>6784.50</td>
+                <td>253999.00</td>
+                <td>6784.00</td>
+            </tr>
+            <tr>
+                <td>Pesquisa Sequencial</td>
+                <td>1023.00</td>
+                <td>0</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Pesquisa Binária</td>
+                <td>10.00</td>
+                <td>0</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <h2>Conclusões</h2>
+    <li><strong>ShellSort:</strong> 
+        <ul> 
+            <li>Espaçamento 1: Desmonstra resultados eficientes e com baixa variabilidade(desvios), valores consistentes em comparação a
+                sua complexidade estimada nlogn;</li>
+            <li>Espaçamento 2: Possui menores numeros de trocas em comparação ao espaçamento 1, porem numeros maiores de comparações e variabilidade.
+                Vantagem: implementação simples. Desvantagem: exige boa escolha de espaçamento para não chegar ao pior caso (n²) e não é estavel. 
+            </li>
+        </ul>
+    </li>
+    <li><strong>QuickSort:</strong> 
+        <ul> 
+            <li>Pivô 1: Possui numero de desvio baixo, sendo consistente e refletindo sua média de nlogn;</li>
+            <li>Pivô 2: Divide meelhor os subvetores pois reduz significativamente o numero de trocas.
+                Vantagem: eficiente para grandes conjuntos de dados. Desvantagem: exige uma boa escolha de pivõ e não é estavel.
+            </li> 
+        </ul>
+    </li>
+    <li><strong>InsertionSort:</strong> 
+        <ul> 
+            <li>Demonstra ser o mais ineficaz dos metodos de ordenação, com valores gigantescos de comparações e trocas em vetores grandes. 
+            Numeros condizentes com sua complexidade n².
+            Vantagem: algoritmo estável e e simples.
+            Desvantagem: ineficaz em vetores com muitos elementos.
+            </li>
+        </ul>
+    </li>
+    <li><strong>Busca Sequencial:</strong> 
+        <ul> 
+            <li>
+                Sua média reflete exatamente na necessidade do algoritmo percorrer todo o vetor, mesmo sendo implementado com um sentinela.
+                Vantagem: fácil implementação e pode ser usado para vetores desordenados.
+                Desvantagem ineficiente para vetores muito grandes.
+            </li>
+        </ul>
+    </li>
+    <li><strong>Busca Binária:</strong> 
+        <ul> 
+            <li>
+                Baixos numeros de comparações, muito eficiente e resultados demonstrando sua complexidade logn.
+                Vantagem: custo muito baixo. Desvantagem: depende de vetores ordenados.
+            </li>
+        </ul>
+    </li>
+    <p>Os testes realizados confirmam que o QuickSort é o algoritmo mais eficiente entre os implementados, especialmente ao usar o pivô 1. Comparando com o Shellsort:
+        
+        <ul>
+            <li>Comparações:</li>
+            ShellSort com espaçamento 1: 14.995,50 (50% maior que o QuickSort com pivô 1).                                                                  
+            ShellSort com espaçamento 2: 15.760,00 (cerca de 53% maior que o QuickSort com pivô 1).</li>
+        </ul>
+        <ul>
+            <li>Permutações:</li>
+            ShellSort com espaçamento 1: 8.840,00 (mais que o dobro do QuickSort com pivô 1).
+            ShellSort com espaçamento 2: 7.465,50 (cerca de 105% maior que o QuickSort com pivô 1).
+        </ul>
+            Porem, em todo caso, ShellSort também apresentou bons resultados, especialmente com o espaçamento de Knuth(aprendedido em aula). Em contrapartida, o InsertionSort foi significativamente mais lento.</p>
+    <p>Para buscas, a Pesquisa Binária é extremamente eficiente, mas depende de o vetor estar ordenado. A Pesquisa Sequencial, embora menos eficiente, é aplicável em qualquer situação.</p>
+
+
+    <h2>Referências</h2>
+    <li>
+        <strong>Site 1: ShellSort - Guru99</strong><br>
+        GURU99. Shell Sort Algorithm. Guru99, 2024. Disponível em: 
+        <a href="https://www.guru99.com/pt/shell-sort-algorithm.html" target="_blank">https://www.guru99.com/pt/shell-sort-algorithm.html</a>. 
+        Acesso em: 18 nov. 2024.</li>
+    <li>
+        <strong>Site 2: QuickSort - Wikiversidade</strong><br>
+        WIKIVERSIDADE. Quicksort. Wikiversidade, 2024. Disponível em: 
+        <a href="https://pt.wikiversity.org/wiki/Quicksort" target="_blank">https://pt.wikiversity.org/wiki/Quicksort</a>. 
+        Acesso em: 18 nov. 2024.</li>
+    </body>
+</html>

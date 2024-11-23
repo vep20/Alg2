@@ -129,12 +129,14 @@ int insertionSort(int vet[], int tam, int *permutacao){
     for (int i = 1; i < tam; i++){
         chave = vet[i];
         j = i - 1;
-        auxNumComparacoes++;
         while (j >= 1 && vet[j] > chave){
+            auxNumComparacoes++;
             troca(vet, j, j + 1);
             (*permutacao)++;
             j--;
         }
+        if (j >= 1)
+            auxNumComparacoes++;
         vet[j + 1] = chave;
     }
 
