@@ -4,8 +4,12 @@ GIT = git
 # Target para fazer push das mudanças
 push:
 	$(GIT) add .
-	$(GIT) commit -m "Commit automático"
-	$(GIT) push
+	@if ! $(GIT) diff-index --quiet HEAD --; then \
+		$(GIT) commit -m "Commit automático"; \
+		$(GIT) push; \
+	else \
+		echo "Nada a commitar, repositório limpo."; \
+	fi
 
 # Target para fazer pull das mudanças
 pull:
